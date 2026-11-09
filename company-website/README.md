@@ -21,6 +21,7 @@ company-website/
 ├── index.html       # Home page: hero and intro
 ├── services.html    # Services page: service cards and call to action
 ├── about.html       # About page: story, values, founder, key numbers
+├── contacts.html    # Contacts page: contact details, form and map
 ├── styles.css       # Shared stylesheet for all pages
 └── README.md        # This file
 ```
@@ -32,7 +33,7 @@ company-website/
 | Home     | `index.html`    | Done    |
 | Services | `services.html` | Done    |
 | About    | `about.html`    | Done    |
-| Contacts | `contacts.html` | Planned |
+| Contacts | `contacts.html` | Done    |
 
 ## Run locally
 
