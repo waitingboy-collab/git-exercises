@@ -209,6 +209,21 @@ em {
   border-radius: 11px;
   background: var(--ink);
   color: var(--paper);
+  transition: background 0.3s ease, transform 0.5s var(--ease);
+}
+
+/* Clickable logo in the header: subtle hover */
+a.brand:hover .logo {
+  background: var(--accent-strong);
+  transform: rotate(-8deg) scale(1.05);
+}
+
+a.brand:hover .brand-name {
+  color: var(--accent-strong);
+}
+
+.brand-name {
+  transition: color 0.3s ease;
 }
 
 .brand-text {
