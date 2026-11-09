@@ -20,6 +20,7 @@ unit-converter/
 | Temperature | Done        |
 | Weight      | Done        |
 | Volume      | Done        |
+| Speed       | Done        |
 
 ## Run locally
 
