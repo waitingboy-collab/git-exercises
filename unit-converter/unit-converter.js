@@ -122,22 +122,6 @@ const converters = {
     },
   },
 
-  speed: {
-    label: "Speed",
-    baseUnit: "meter per second",
-    allowNegative: false,
-    defaults: { from: "kmh", to: "mph" },
-    units: {
-      ms:   { name: "Meter per second",    symbol: "m/s",  factor: 1 },
-      kmh:  { name: "Kilometer per hour",  symbol: "km/h", factor: 1000 / 3600 },
-      mph:  { name: "Mile per hour",       symbol: "mph",  factor: 0.44704 },
-      knot: { name: "Knot",                symbol: "kn",   factor: 1852 / 3600 },
-    },
-    convert(value, from, to) {
-      return convertByFactor(value, from, to, this.units);
-    },
-  },
-
   area: {
     label: "Area",
     baseUnit: "square meter",
