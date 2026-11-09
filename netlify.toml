@@ -1,0 +1,5 @@
+# Netlify settings: the website lives in the company-website folder.
+# Static HTML/CSS only, so there is no build command.
+[build]
+  base = "company-website"
+  publish = "."
