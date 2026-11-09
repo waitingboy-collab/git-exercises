@@ -155,6 +155,24 @@ const converters = {
       return convertByFactor(value, from, to, this.units);
     },
   },
+
+  pressure: {
+    label: "Pressure",
+    baseUnit: "pascal",
+    allowNegative: false,
+    defaults: { from: "bar", to: "psi" },
+    units: {
+      pa:   { name: "Pascal",                    symbol: "Pa",   factor: 1 },
+      kpa:  { name: "Kilopascal",                symbol: "kPa",  factor: 1000 },
+      bar:  { name: "Bar",                       symbol: "bar",  factor: 100000 },
+      atm:  { name: "Standard atmosphere",       symbol: "atm",  factor: 101325 },
+      psi:  { name: "Pound per square inch",     symbol: "psi",  factor: 6894.757293168 },
+      mmhg: { name: "Millimeter of mercury",     symbol: "mmHg", factor: 133.322387415 },
+    },
+    convert(value, from, to) {
+      return convertByFactor(value, from, to, this.units);
+    },
+  },
 };
 
 /* ---------- Rendering ---------- */

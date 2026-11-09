@@ -22,6 +22,7 @@ unit-converter/
 | Volume      | Done        |
 | Speed       | Done        |
 | Area        | Done        |
+| Pressure    | Done        |
 
 ## Run locally
 
