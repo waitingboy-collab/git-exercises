@@ -9,6 +9,11 @@
 - Each exercise has its own folder. The company website (exercises 1 and 2) is in `company-website/`; the unit converter (exercise 3) is in `unit-converter/`.
 - Create and edit website files only inside `company-website/`.
 
+# Unit converter (exercise 3)
+- Project: Unit Converter web app in `unit-converter/`.
+- Files: unit-converter.html, unit-converter.css, unit-converter.js. Plain HTML, one CSS file, vanilla JS.
+- Each converter category is an entry in the `converters` object in unit-converter.js plus one tab button in the HTML.
+
 # Working rules
 - Do ONLY the step I ask for. Do not build future pages or features in advance.
 - Never run git commands (commit, push, branch, merge). I do version control manually.

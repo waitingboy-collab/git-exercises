@@ -1,0 +1,234 @@
+/* ==========================================================
+   Unit Converter — the only stylesheet for the app
+   Light "precision instrument" theme.
+   ========================================================== */
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Colors */
+  --bg: #f5f5f1;
+  --surface: #ffffff;
+  --surface-2: #f9f9f6;
+  --ink: #131a22;
+  --ink-2: #444d57;
+  --ink-3: #5f6873;
+  --line: #e3e3dc;
+  --line-strong: #cfcfc6;
+  --accent: #2f5bea;
+  --accent-strong: #1f43c2;
+  --accent-soft: #e6ecfd;
+  --grid: rgba(19, 26, 34, 0.045);
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --warning: #8a5a00;
+  --warning-soft: #fff4dc;
+
+  /* Typography */
+  --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* Layout */
+  --max-width: 760px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --radius: 20px;
+  --radius-sm: 12px;
+
+  /* Effects */
+  --shadow-card: 0 1px 2px rgba(19, 26, 34, 0.05), 0 24px 48px -24px rgba(19, 26, 34, 0.22);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  /* Subtle graph-paper background */
+  background:
+    linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- Header ---------- */
+.app-header {
+  padding: clamp(2rem, 6vw, 3.5rem) 0 1.5rem;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.app-logo {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 14px;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.app-title {
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.app-subtitle {
+  font-size: 0.92rem;
+  color: var(--ink-3);
+}
+
+/* ---------- Tabs ---------- */
+.tabs-nav {
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 calc(var(--gutter) * -1);
+  padding: 0 var(--gutter);
+}
+
+.tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.3rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(19, 26, 34, 0.04);
+}
+
+.tab {
+  padding: 0.55rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tab:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.tab[aria-selected="true"] {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+/* ---------- Converter card ---------- */
+.app-main {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+.converter-card {
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.converter-card:focus-visible {
+  outline-offset: 4px;
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.card-units {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  text-align: right;
+}
+
+.placeholder {
+  padding: 2.5rem 1rem;
+  border: 1.5px dashed var(--line-strong);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  color: var(--ink-3);
+}
+
+/* ---------- Footer ---------- */
+.app-footer {
+  padding: 1.5rem 0 2rem;
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+
+/* ---------- Motion ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .converter-card > * {
+    animation: fade-in 0.35s var(--ease) both;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
