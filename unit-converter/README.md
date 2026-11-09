@@ -17,7 +17,7 @@ unit-converter/
 | Category    | Status      |
 |-------------|-------------|
 | Length      | Done        |
-| Temperature | Coming soon |
+| Temperature | Done        |
 
 ## Run locally
 
