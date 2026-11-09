@@ -8,14 +8,14 @@ Practice repository for Git, GitHub, branches, pull requests and Netlify deploym
 | 2 | Using branches (v2 redesign, tabs, PR #1) | [`company-website/`](company-website/) | Done   |
 | 3 | Unit converter app (PR #2 and #3)         | [`unit-converter/`](unit-converter/)   | Done   |
 
-## Live sites (Netlify)
+## Live sites
 
-Both sites deploy automatically on every push to `main`.
+| Site            | Vercel (live)                                     | Netlify                                     |
+|-----------------|---------------------------------------------------|---------------------------------------------|
+| Company website | <https://radoslav-aerial-videography.vercel.app>  | <https://tiny-pithivier-696c88.netlify.app> |
+| Unit converter  | <https://radoslav-unit-converter.vercel.app>      | <https://golden-melba-230555.netlify.app>   |
 
-| Site            | URL                                          | Netlify base directory |
-|-----------------|----------------------------------------------|------------------------|
-| Company website | <https://tiny-pithivier-696c88.netlify.app>  | `company-website`      |
-| Unit converter  | <https://golden-melba-230555.netlify.app>    | `unit-converter`       |
+Netlify deploys automatically from `main` but is paused until the free credits renew on 14 Nov 2026. Until then the Netlify unit converter link still shows the company website.
 
 ## What each exercise practised
 
