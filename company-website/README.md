@@ -20,6 +20,7 @@ Business website for Radoslav Aerial Videography, a drone photography and videog
 company-website/
 ├── index.html       # Home page: hero and intro
 ├── services.html    # Services page: service cards and call to action
+├── about.html       # About page: story, values, founder, key numbers
 ├── styles.css       # Shared stylesheet for all pages
 └── README.md        # This file
 ```
@@ -30,7 +31,7 @@ company-website/
 |----------|-----------------|---------|
 | Home     | `index.html`    | Done    |
 | Services | `services.html` | Done    |
-| About    | `about.html`    | Planned |
+| About    | `about.html`    | Done    |
 | Contacts | `contacts.html` | Planned |
 
 ## Run locally
