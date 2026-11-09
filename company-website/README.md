@@ -27,13 +27,13 @@ company-website/
 
 ## Sections (tabs)
 
-| Tab      | Link             | Content                                   |
-|----------|------------------|-------------------------------------------|
+| Tab      | Link                  | Content                                 |
+|----------|-----------------------|-----------------------------------------|
 | Home     | `index.html#home`     | Hero, highlights, studio intro, process |
-| Services | `index.html#services` | Six service cards and a call to action |
-| About    | `index.html#about`    | Story, values, founder, key numbers    |
-| News     | `index.html#news`     | Latest news cards                      |
-| Contacts | `index.html#contacts` | Contact details, demo form and map     |
+| Services | `index.html#services` | Six service cards and a call to action  |
+| About    | `index.html#about`    | Story, values, founder, key numbers     |
+| News     | `index.html#news`     | Latest news cards                       |
+| Contacts | `index.html#contacts` | Contact details, demo form and map      |
 
 Each tab has its own URL hash, so links such as `index.html#services` open the right tab and the browser's back and forward buttons work. Without JavaScript all sections are shown one after another.
 

@@ -308,6 +308,31 @@ a.brand:hover .brand-name {
   margin-left: -0.8rem;
 }
 
+/* Mobile: five tabs fit at 375px; the bar still scrolls sideways on smaller screens */
+@media (max-width: 899px) {
+  .main-nav ul {
+    justify-content: space-between;
+  }
+
+  .main-nav a {
+    padding: 0.5rem 0.45rem;
+    font-size: 0.92rem;
+  }
+
+  .main-nav a::after {
+    left: 0.45rem;
+    right: 0.45rem;
+  }
+
+  .main-nav li:first-child a {
+    margin-left: -0.45rem;
+  }
+
+  .main-nav li:last-child a {
+    margin-right: -0.45rem;
+  }
+}
+
 .main-nav a:hover {
   color: var(--ink);
 }
