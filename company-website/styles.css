@@ -1391,6 +1391,15 @@ a.brand:hover .brand-name {
   color: var(--ink-2);
 }
 
+/* ---------- Tabs (single-page version) ---------- */
+.tab-panel[hidden] {
+  display: none;
+}
+
+.tab-panel:focus {
+  outline: none;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   padding-top: clamp(3.5rem, 7vw, 5rem);
