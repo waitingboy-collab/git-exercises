@@ -58,8 +58,29 @@ const converters = {
 
   temperature: {
     label: "Temperature",
-    units: {},
-    convert: null,           // not implemented yet
+    allowNegative: true,
+    defaults: { from: "c", to: "f" },
+    // Temperature scales have different zero points, so a factor table is not enough:
+    // every unit has a formula to Celsius and back.
+    units: {
+      c: { name: "Celsius",    symbol: "°C", toCelsius: (v) => v,                  fromCelsius: (c) => c },
+      f: { name: "Fahrenheit", symbol: "°F", toCelsius: (v) => ((v - 32) * 5) / 9, fromCelsius: (c) => (c * 9) / 5 + 32 },
+      k: { name: "Kelvin",     symbol: "K",  toCelsius: (v) => v - 273.15,         fromCelsius: (c) => c + 273.15 },
+    },
+    convert(value, from, to) {
+      return this.units[to].fromCelsius(this.units[from].toCelsius(value));
+    },
+    validate(value, from) {
+      const ABSOLUTE_ZERO_C = -273.15;
+      const TOLERANCE = 1e-9;        // ignore tiny floating-point errors, e.g. -459.67 °F
+      if (this.units[from].toCelsius(value) < ABSOLUTE_ZERO_C - TOLERANCE) {
+        return {
+          type: "error",
+          text: "That is below absolute zero (0 K = −273.15 °C = −459.67 °F). Nothing can be colder.",
+        };
+      }
+      return null;
+    },
   },
 };
 
