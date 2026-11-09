@@ -5,37 +5,37 @@ Business website for Radoslav Aerial Videography, a drone photography and videog
 ## Tech stack
 
 - HTML5
-- CSS3 (one shared stylesheet, no frameworks, no JavaScript)
+- CSS3 (one shared stylesheet, no frameworks)
+- Vanilla JavaScript for tab switching (no libraries)
 - Google Fonts: Instrument Serif, Manrope, JetBrains Mono
 
 ## Design
 
-- Light, editorial look with an aerial "camera viewfinder" theme: corner brackets, REC and altitude readouts, and real Krumovgrad coordinates.
-- Layered Rhodope mountain ridges, a hovering drone and topographic contour lines, all drawn with inline SVG and CSS. No image files.
+- Light "golden hour" theme with an aerial camera-viewfinder look: corner brackets, REC and altitude readouts, and real Krumovgrad coordinates.
+- Layered Rhodope mountain ridges, a setting sun, a hovering drone and topographic contour lines, all drawn with inline SVG and CSS. No image files.
 - CSS-only motion: hero fade-in, parallax ridges and a header shadow while scrolling, and sections that fade in as they appear. Motion turns off for visitors who ask for reduced motion.
 
 ## Project structure
 
 ```text
 company-website/
-├── index.html       # Home page: hero and intro
-├── services.html    # Services page: service cards and call to action
-├── about.html       # About page: story, values, founder, key numbers
-├── news.html        # News page: latest news cards
-├── contacts.html    # Contacts page: contact details, form and map
-├── styles.css       # Shared stylesheet for all pages
-└── README.md        # This file
+├── index.html    # The whole site: five tab panels (Home, Services, About, News, Contacts)
+├── styles.css    # All styles
+├── scripts.js    # Tab switching and URL hash handling
+└── README.md     # This file
 ```
 
-## Pages
+## Sections (tabs)
 
-| Page     | File            | Status  |
-|----------|-----------------|---------|
-| Home     | `index.html`    | Done    |
-| Services | `services.html` | Done    |
-| About    | `about.html`    | Done    |
-| News     | `news.html`     | Done    |
-| Contacts | `contacts.html` | Done    |
+| Tab      | Link                  | Content                                 |
+|----------|-----------------------|-----------------------------------------|
+| Home     | `index.html#home`     | Hero, highlights, studio intro, process |
+| Services | `index.html#services` | Six service cards and a call to action  |
+| About    | `index.html#about`    | Story, values, founder, key numbers     |
+| News     | `index.html#news`     | Latest news cards                       |
+| Contacts | `index.html#contacts` | Contact details, demo form and map      |
+
+Each tab has its own URL hash, so links such as `index.html#services` open the right tab and the browser's back and forward buttons work. Without JavaScript all sections are shown one after another.
 
 ## Run locally
 
