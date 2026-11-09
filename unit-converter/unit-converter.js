@@ -82,6 +82,25 @@ const converters = {
       return null;
     },
   },
+
+  weight: {
+    label: "Weight",
+    baseUnit: "kilogram",
+    allowNegative: false,
+    defaults: { from: "kg", to: "lb" },
+    units: {
+      mg: { name: "Milligram",   symbol: "mg", factor: 0.000001 },
+      g:  { name: "Gram",        symbol: "g",  factor: 0.001 },
+      kg: { name: "Kilogram",    symbol: "kg", factor: 1 },
+      t:  { name: "Metric tonne", symbol: "t", factor: 1000 },
+      oz: { name: "Ounce",       symbol: "oz", factor: 0.028349523125 },
+      lb: { name: "Pound",       symbol: "lb", factor: 0.45359237 },
+      st: { name: "Stone",       symbol: "st", factor: 6.35029318 },
+    },
+    convert(value, from, to) {
+      return convertByFactor(value, from, to, this.units);
+    },
+  },
 };
 
 /* ---------- Rendering ---------- */

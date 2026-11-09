@@ -18,6 +18,7 @@ unit-converter/
 |-------------|-------------|
 | Length      | Done        |
 | Temperature | Done        |
+| Weight      | Done        |
 
 ## Run locally
 
