@@ -5,6 +5,10 @@
 - Design: light color theme, clean modern look, mobile-first responsive layout, accessible (semantic tags, alt text, sufficient contrast).
 - Every page shares the same header (logo + navigation) and footer (copyright + links).
 
+# Repository layout
+- Each exercise has its own folder. The company website (exercises 1 and 2) is in `company-website/`; the unit converter (exercise 3) is in `unit-converter/`.
+- Create and edit website files only inside `company-website/`.
+
 # Working rules
 - Do ONLY the step I ask for. Do not build future pages or features in advance.
 - Never run git commands (commit, push, branch, merge). I do version control manually.
