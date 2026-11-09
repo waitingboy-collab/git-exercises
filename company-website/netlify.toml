@@ -1,0 +1,4 @@
+# Netlify settings for this site (the site base directory is company-website).
+# Static HTML/CSS/JS only, so there is no build command.
+[build]
+  publish = "."

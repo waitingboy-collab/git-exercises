@@ -22,6 +22,7 @@ company-website/
 ├── index.html    # The whole site: five tab panels (Home, Services, About, News, Contacts)
 ├── styles.css    # All styles
 ├── scripts.js    # Tab switching and URL hash handling
+├── netlify.toml  # Netlify settings (publish this folder)
 └── README.md     # This file
 ```
 
@@ -46,7 +47,7 @@ No build step is needed.
 
 ## Live demo
 
-Coming soon (Netlify)
+<https://tiny-pithivier-696c88.netlify.app> (Netlify, deployed automatically from `main`)
 
 ## Author
 
