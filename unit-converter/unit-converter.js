@@ -101,6 +101,26 @@ const converters = {
       return convertByFactor(value, from, to, this.units);
     },
   },
+
+  volume: {
+    label: "Volume",
+    baseUnit: "liter",
+    allowNegative: false,
+    defaults: { from: "l", to: "usgal" },
+    units: {
+      ml:    { name: "Milliliter",       symbol: "ml",     factor: 0.001 },
+      l:     { name: "Liter",            symbol: "l",      factor: 1 },
+      m3:    { name: "Cubic meter",      symbol: "m³",     factor: 1000 },
+      tsp:   { name: "Teaspoon (US)",    symbol: "tsp",    factor: 0.00492892159375 },
+      tbsp:  { name: "Tablespoon (US)",  symbol: "tbsp",   factor: 0.01478676478125 },
+      cup:   { name: "Cup (US)",         symbol: "cup",    factor: 0.2365882365 },
+      usgal: { name: "US gallon",        symbol: "US gal", factor: 3.785411784 },
+      ukgal: { name: "UK gallon",        symbol: "UK gal", factor: 4.54609 },
+    },
+    convert(value, from, to) {
+      return convertByFactor(value, from, to, this.units);
+    },
+  },
 };
 
 /* ---------- Rendering ---------- */
