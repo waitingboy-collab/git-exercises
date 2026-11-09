@@ -21,6 +21,7 @@ unit-converter/
 | Weight      | Done        |
 | Volume      | Done        |
 | Speed       | Done        |
+| Area        | Done        |
 
 ## Run locally
 

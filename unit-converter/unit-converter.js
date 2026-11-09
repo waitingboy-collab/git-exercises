@@ -137,6 +137,24 @@ const converters = {
       return convertByFactor(value, from, to, this.units);
     },
   },
+
+  area: {
+    label: "Area",
+    baseUnit: "square meter",
+    allowNegative: false,
+    defaults: { from: "ha", to: "acre" },
+    units: {
+      m2:   { name: "Square meter",     symbol: "m²",  factor: 1 },
+      km2:  { name: "Square kilometer", symbol: "km²", factor: 1000000 },
+      ha:   { name: "Hectare",          symbol: "ha",  factor: 10000 },
+      acre: { name: "Acre",             symbol: "ac",  factor: 4046.8564224 },
+      ft2:  { name: "Square foot",      symbol: "ft²", factor: 0.09290304 },
+      in2:  { name: "Square inch",      symbol: "in²", factor: 0.00064516 },
+    },
+    convert(value, from, to) {
+      return convertByFactor(value, from, to, this.units);
+    },
+  },
 };
 
 /* ---------- Rendering ---------- */
